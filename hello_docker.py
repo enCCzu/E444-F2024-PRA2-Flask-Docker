@@ -46,3 +46,6 @@ def index():
 @app.route('/user/<name>')
 def user(name):
     return render_template('user.html', name=name, current_time=datetime.now(timezone.utc))
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', debug=True)
